@@ -8,7 +8,7 @@
 -module(config).
 
 % exports
--export([host_client/0, host_helpdesk/0, max_sessions/0]).
+-export([host_client/0, host_helpdesk/0, max_sessions/0, riak_erlang_client/0, riak_cluster/0]).
 
 % include files
 -include("clicktochat.hrl").
@@ -39,3 +39,20 @@ host_helpdesk() ->
 -spec max_sessions() -> term().
 max_sessions() ->
     proplists:get_value(max_sessions, load(?config_file)).  
+
+
+%% @doc Retrieves the riak erlang client path
+%% @spec riak_erlang_client() -> term()
+-spec riak_erlang_client() -> term().
+riak_erlang_client() ->
+    proplists:get_value(riak_erlang_client, load(?config_file)).  
+
+%% @doc Retrieves the riak_cluster value
+%% @spec riak_cluster() -> term()
+-spec riak_cluster() -> term().
+riak_cluster() ->
+    proplists:get_value(riak_cluster, load(?config_file)).
+
+
+
+
