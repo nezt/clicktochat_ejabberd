@@ -111,9 +111,24 @@ avoiding that a single user attends all requests.
 	|   USER-3   |                                             |   USER-1   |
 	--------------                                             --------------
 
-Integrating with DB
+Integrating with Riak
 ====
 
-To save the conversation in any database that you choose, you can perform the 
-actions on module 'hooksI', in the function 'on_user_send_packet', in the case 
-where Packet is evaluated you can perform actions on it.
+To save the conversation into Riak database, you need configure clicktochat.conf file:
+
+in {riak_erlang_client,Path} to set the riak erlang client path,
+
+in {riak_cluster,cluster} to set your cluster info.
+
+
+the structure for the conversation is:
+
+         |                    |     [{record,[[{current_time, CurrentDate},               |
+         |  IdHelpDeskuser    |                {user, User},                              | 
+         |                    |                {conversation, Conversation}]]}]           |
+
+
+Where in Conversation field has the next structure for each message:
+
+                            |current_time^Currentime|from^From|to^T"|msg^Msg|
+
