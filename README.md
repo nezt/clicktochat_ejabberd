@@ -116,9 +116,8 @@ Integrating with Riak
 
 To save the conversation into Riak database, you need configure clicktochat.conf file:
 
-in 	{riak_erlang_client,Path} to set the riak erlang client path,
-
-in 	{riak_cluster,cluster} to set your cluster info.
+	{riak_erlang_client,Path} to set the riak erlang client path.
+	{riak_cluster,cluster} to set your cluster info.
 
 
 the structure for the conversation is:
