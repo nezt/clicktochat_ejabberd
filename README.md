@@ -120,7 +120,7 @@ To save the conversation into Riak database, you need configure clicktochat.conf
 	{riak_cluster,cluster} to set your cluster info.
 
 
-the structure for the conversation is:
+The structure for the conversation is:
 
          |                    |     [{record,[[{current_time, CurrentDate},               |
          |  IdHelpDeskuser    |                {user, User},                              | 
@@ -129,7 +129,7 @@ the structure for the conversation is:
 
 Where in Conversation field has the next structure for each message:
 
-                            |current_time^Currentime|from^From|to^T"|msg^Msg|
+                            |current_time^Currentime|from^From|to^T|msg^Msg|
 
 General Message Format
 ====
