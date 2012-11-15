@@ -132,3 +132,19 @@ Where in Conversation field has the next structure for each message:
 
                             |current_time^Currentime|from^From|to^T"|msg^Msg|
 
+General Message Format
+====
+
+The message has the next fields:
+
+	current_time: current time that was sent the message
+	from:	      person who send the message		
+	to:	      person who receive the message		
+	msg:          sent message  
+
+Description about the format:
+
+	* Field sequences in the message are separated by “|”.
+	* Values from the fields are separated by “^”.
+
+
