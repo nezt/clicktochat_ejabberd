@@ -138,7 +138,7 @@ The message has the next fields:
 
 	current_time: current time that was sent the message
 	from:	      person who send the message		
-	to:	         person who receive the message		
+	to:	          person who receive the message		
 	msg:          sent message  
 
 Description about the format:
